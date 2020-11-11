@@ -14,9 +14,9 @@ jobs:
         uses: actions/checkout@main
       
       - name: "📚  Hashnode Updater"
-        uses: "laasya-setty/action-hashnode-blog@main"
+        uses: "varunsridharan/action-hashnode-blog@main"
         with:
-          USERNAME: 'laasya-setty'
+          USERNAME: 'Laasya_Setty'
           COUNT: 9
           STYLE: "blog-grid-3"
         env:
