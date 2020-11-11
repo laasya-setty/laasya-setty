@@ -18,6 +18,7 @@ jobs:
         with:
           USERNAME: 'Laasya_Setty'
           COUNT: 9
+          BLOG_URL: "https://laasyasettyblog.hashnode.dev"
           STYLE: "blog-alternate"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
