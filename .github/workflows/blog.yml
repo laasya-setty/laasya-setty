@@ -1,58 +1,24 @@
-name: "📄  Dynamic ReadME"
-
-env:
-  VS_WORKFLOW_TYPE: "dynamic-readme"
+name: "📚 Blog Updater"
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
-    paths:
-      - README.md
+  schedule:
+    - cron: '0 0 * * *'
 
 jobs:
-  update_readme:
-    name: "Render & Update ReadME"
+  update_blogs:
+    name: "Update Blogs"
     runs-on: ubuntu-latest
     steps:
       - name: "📥  Fetching Repository Contents"
         uses: actions/checkout@main
-
-      - name: "💾  Github Repository Metadata"
-        uses: varunsridharan/action-repository-meta@main
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: "💫  VS Utility"
-        uses: varunsridharan/action-vs-utility@main
-
-      - name: "⚡  Repository - Before Hook"
-        run: |
-          echo " "
-          if [ -f $VS_BEFORE_HOOK_FILE_LOCATION ]; then
-            echo "✅ Before Hook File Found : $VS_BEFORE_HOOK_FILE_LOCATION"
-            sh $VS_BEFORE_HOOK_FILE_LOCATION
-          else
-            echo "⚠️ No Before Hook File Found : $VS_BEFORE_HOOK_FILE_LOCATION"
-          fi
-          echo " "
-      - name: "💫  Update README.md"
-        uses: "varunsridharan/action-dynamic-readme@main"
+      
+      - name: "📚  Hashnode Updater"
+        uses: "Laasya_Setty/action-hashnode-blog@main"
         with:
-          GLOBAL_TEMPLATE_REPOSITORY: varunsridharan/varunsridharan@main/readme-templates
-          files: |
-            README.md
+          USERNAME: 'Laasya_Setty'
+          COUNT: 9
+          STYLE: "blog-grid-3"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: "⚡  Repository - After Hook"
-        run: |
-          echo " "
-          if [ -f $VS_AFTER_HOOK_FILE_LOCATION ]; then
-            echo "✅ After Hook File Found : $VS_AFTER_HOOK_FILE_LOCATION"
-            sh $VS_AFTER_HOOK_FILE_LOCATION
-          else
-            echo "⚠️ No After Hook File Found : $VS_AFTER_HOOK_FILE_LOCATION"
-          fi
-          echo " "
