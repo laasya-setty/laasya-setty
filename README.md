@@ -2,7 +2,7 @@
 <link href="style.css" rel="stylesheet"></link>
 <h1> Hi there!!👋</h1>
 <p>➡ Senior Data Engineer<br>
-➡Reach me out for help if needed<br>
+➡Reach out for support in Power Platforms, Azure, Databricks, Agentic AI<br>
   LinkedIn: <a href="https://twitter.com/LaasyaSetty"> click here</a><br>
   Twitter:<a href="https://www.linkedin.com/in/sai-laasya-vabilisetty-305bba17a/"> click here</a><br>
 </p>
