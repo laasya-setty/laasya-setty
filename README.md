@@ -1,10 +1,10 @@
 <html>
 <link href="style.css" rel="stylesheet"></link>
 <h1> Hi there!!👋</h1>
-<p>➡I am currently learning Azure Cloud🖥 and Java ☕.<br>
+<p>➡ Senior Data Engineer<br>
 ➡Reach me out for help if needed<br>
-  Twitter:<a href="https://twitter.com/LaasyaSetty"> click here😋</a><br>
-➡Apart from these, I am a food panda🤤 and a sleeping bear 🐻.
+  LinkedIn: <a href="https://twitter.com/LaasyaSetty"> click here</a><br>
+  Twitter:<a href="https://www.linkedin.com/in/sai-laasya-vabilisetty-305bba17a/"> click here</a><br>
 </p>
 
 ## My Latest Blog Posts 👇
